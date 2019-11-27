@@ -4493,12 +4493,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfTYPO3/extension_builder.git",
-                "reference": "0ea62acd112d9f17fdaca37833559df07e7b6694"
+                "reference": "f9e2d79a9419fa4eb54ff500258044c6cdd23b42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfTYPO3/extension_builder/zipball/0ea62acd112d9f17fdaca37833559df07e7b6694",
-                "reference": "0ea62acd112d9f17fdaca37833559df07e7b6694",
+                "url": "https://api.github.com/repos/FriendsOfTYPO3/extension_builder/zipball/f9e2d79a9419fa4eb54ff500258044c6cdd23b42",
+                "reference": "f9e2d79a9419fa4eb54ff500258044c6cdd23b42",
                 "shasum": ""
             },
             "require": {
@@ -4512,7 +4512,8 @@
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2",
-                "nimut/testing-framework": "^4"
+                "nimut/testing-framework": "^4",
+                "sebastian/diff": "^3.0"
             },
             "type": "typo3-cms-extension",
             "extra": {
@@ -4547,7 +4548,7 @@
                 "extension_builder",
                 "typo3"
             ],
-            "time": "2019-11-23T12:54:01+00:00"
+            "time": "2019-11-24T20:18:09+00:00"
         }
     ],
     "aliases": [],
