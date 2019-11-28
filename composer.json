@@ -31,7 +31,8 @@
         "typo3/cms-tstemplate": "^9.5",
         "typo3/cms-viewpage": "^9.5",
         "cweagans/composer-patches": "^1.6",
-        "kunal-harkare/book-store-site": "^1.0"
+        "kunal-harkare/book-store-site": "^1.0",
+        "kunalharkare/book-store-app": "dev-master"
     },
     "repositories": {
         "local": {

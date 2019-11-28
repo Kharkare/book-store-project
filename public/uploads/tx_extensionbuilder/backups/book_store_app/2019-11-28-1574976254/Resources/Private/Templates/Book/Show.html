@@ -1,0 +1,94 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+
+    <h2>{book.title}</h2>
+    <div class="row">
+        <div class="col-3">
+            <f:if condition="{book.image}">
+                <f:then>
+                    <f:image src="{book.image.0.originalResource.publicUrl}" width="200"/>
+                </f:then>
+                <f:else>
+                    No image availables
+                </f:else>
+            </f:if>
+
+        </div>
+        <div class="col-6">
+            <p>
+                <f:for each="{book.author}" as="author" iteration="iterator">
+                    <f:link.action action="show" controller="Author" arguments="{author:author}">
+                        {author.name}
+                    </f:link.action>
+                    <f:if condition="{iterator.isLast}">
+                        <f:else>
+                            ,
+                        </f:else>
+                    </f:if>
+                </f:for>
+            </p>
+            <p>
+                released on....date...
+            </p>
+            <p>
+                by
+                <f:link.action action="show" controller="Publisher" arguments="{publisher:publisher}">
+                    {book.publisher.name}
+                </f:link.action>
+
+            </p>
+            <p>
+                <f:format.html>
+                    {book.description}
+                </f:format.html>
+            </p>
+            <p>
+                <f:format.nl2br>
+                    {book.blurb}
+                </f:format.nl2br>
+            </p>
+            <p>
+                Pages: {book.pages}
+            </p>
+        </div>
+        <div class="col-3">
+            <p>
+                <strong>
+                    <f:format.currency  currencySign="EUR">
+                        {book.price}
+                    </f:format.currency>
+                </strong>
+            </p>
+            <div>
+                <a class="btn btn-info" role="button">Add To wishlist</a>
+            </div>
+            <div>
+                <a class="btn btn-primary" role="button">Add To Cart</a>
+            </div>
+            <div>
+                <f:for each="{book.topic}" as="topic">
+                    <span class="badge">
+                        {topic.name}
+                    </span>
+                </f:for>
+            </div>
+        </div>
+    </div>
+
+    <f:link.action action="list">Back to list</f:link.action><br />
+    <f:link.action action="new">New Book</f:link.action>
+</f:section>
+</html>

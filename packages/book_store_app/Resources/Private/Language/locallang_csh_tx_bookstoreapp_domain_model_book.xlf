@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="EXT:book_store_app/Resources/Private/Language/locallang_csh" date="2019-11-27T11:47:22Z" product-name="book_store_app">
+	<file source-language="en" datatype="plaintext" original="EXT:book_store_app/Resources/Private/Language/locallang_csh" date="2019-11-28T21:24:14Z" product-name="book_store_app">
 		<header/>
 		<body>
 			<trans-unit id="isbn.description" resname="isbn.description">

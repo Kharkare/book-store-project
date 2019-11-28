@@ -37,34 +37,12 @@
                             "allowedFileTypes": "",
                             "maxItems": "1",
                             "propertyDescription": "",
-                            "propertyIsExcludeField": false,
+                            "propertyIsExcludeField": true,
                             "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": true,
                             "propertyName": "name",
                             "propertyType": "String",
-                            "uid": "986796647065"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsL10nModeExclude": false,
-                            "propertyIsRequired": false,
-                            "propertyName": "description",
-                            "propertyType": "Text",
-                            "uid": "1364000331562"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsL10nModeExclude": false,
-                            "propertyIsRequired": false,
-                            "propertyName": "biography",
-                            "propertyType": "RichText",
-                            "uid": "567725859644"
+                            "uid": "1040680036224"
                         },
                         {
                             "allowedFileTypes": "",
@@ -76,6 +54,28 @@
                             "propertyName": "dateOfBirth",
                             "propertyType": "NativeDate",
                             "uid": "971130148432"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "description",
+                            "propertyType": "Text",
+                            "uid": "519425152405"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "biography",
+                            "propertyType": "RichText",
+                            "uid": "1126310528955"
                         }
                     ]
                 },
@@ -126,7 +126,7 @@
                             "propertyIsRequired": true,
                             "propertyName": "name",
                             "propertyType": "String",
-                            "uid": "1308445892034"
+                            "uid": "163121175079"
                         },
                         {
                             "allowedFileTypes": "",
@@ -137,7 +137,7 @@
                             "propertyIsRequired": false,
                             "propertyName": "description",
                             "propertyType": "RichText",
-                            "uid": "406611114909"
+                            "uid": "1521234650644"
                         }
                     ]
                 },
@@ -316,8 +316,8 @@
                             "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "description",
-                            "propertyType": "RichText",
-                            "uid": "1183170223387"
+                            "propertyType": "Text",
+                            "uid": "37882059038"
                         },
                         {
                             "allowedFileTypes": "",
@@ -325,10 +325,10 @@
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
                             "propertyIsL10nModeExclude": false,
-                            "propertyIsRequired": false,
+                            "propertyIsRequired": true,
                             "propertyName": "pages",
                             "propertyType": "Integer",
-                            "uid": "768734046243"
+                            "uid": "146037636025"
                         }
                     ]
                 },
@@ -516,7 +516,7 @@
     ],
     "storagePath": "\/var\/www\/html\/packages\/",
     "log": {
-        "last_modified": "2019-11-27 11:47",
+        "last_modified": "2019-11-28 09:24",
         "extension_builder_version": "9.10.2",
         "be_user": " (1)"
     }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "752de3a384f10baf15b8093ec5fd4b42",
+    "content-hash": "a5e312432db36f2751025cc5e505c5f1",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -1063,6 +1063,39 @@
             "homepage": "https://www.hof-university.de",
             "keywords": [
                 "TYPO3 CMS"
+            ]
+        },
+        {
+            "name": "kunalharkare/book-store-app",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "packages/book_store_app",
+                "reference": "75e97f5548fac3fda8569cae1bd114ee738c22c0"
+            },
+            "require": {
+                "typo3/cms-core": "^9.5"
+            },
+            "replace": {
+                "kunalharkare/book-store-app": "self.version",
+                "typo3-ter/book-store-app": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "KunalHarkare\\BookStoreApp\\": "Classes"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "KunalHarkare\\BookStoreApp\\Tests\\": "Tests"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Kunal Harkare",
+                    "role": "Developer"
+                }
             ]
         },
         {
@@ -4554,6 +4587,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "kunalharkare/book-store-app": 20,
         "friendsoftypo3/extension-builder": 20
     },
     "prefer-stable": false,

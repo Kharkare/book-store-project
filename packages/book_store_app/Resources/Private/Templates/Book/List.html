@@ -13,9 +13,66 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="content">
-    <h1>Listing for Book</h1>
+    <div class="row">
+        <div class="col-6">
+            <h2>Books - recent releases</h2>
+        </div>
+        <div class="col-6">
+            <f:form action="list" controller="Book" method="post">
+                <f:form.textfield name="search" placeholder="search" class="form-control" />
+            </f:form>
+        </div>
+    </div>
 
-    <f:flashMessages />
+    <f:if condition="{search}">
+        <div class="alert alert-info">
+            Searched for "{search}", found {books -> f:count()} results
+        </div>
+    </f:if>
+
+    <f:for each="{books}" as="book">
+        <div class="row">
+            <div class="col-3">
+                <f:link.action action="show" controller="Book" arguments="{book: book}">
+                    <f:if condition="{book.image}">
+                        <f:then>
+                            <f:image src="{book.image.0.originalResource.publicUrl}" maxWidth="200" maxHeight="200" />
+                        </f:then>
+                        <f:else>
+                            No images given...
+                        </f:else>
+                    </f:if>
+                </f:link.action>
+            </div>
+            <div class="col-6">
+                <h3>
+                    <f:link.action action="show" controller="Book" arguments="{book: book}">
+                        {book.title}
+                    </f:link.action>
+                </h3>
+                <f:render partial="Book/AuthorList" arguments="{authors: book.author}" />
+                <p>{book.blurb -> f:format.nl2br()}</p>
+                <f:render partial="Book/TopicList" arguments="{topics: book.topic}" />
+            </div>
+            <div class="col-3">
+                <p>
+                    <strong>
+                        {book.price -> f:format.currency(currencySign: 'EUR')}
+                    </strong>
+                </p>
+                <div>
+                    <a class="btn btn-info" role="button">add to wishlish</a>
+                </div>
+                <div>
+                    <a class="btn btn-primary" role="button">add to cart</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </f:for>
+
+
+    <f:comment>
 
     <table  class="tx_bookstoreapp" >
         <tr>
@@ -46,5 +103,6 @@ Otherwise your changes will be overwritten the next time you save the extension 
     </table>
 
     <f:link.action action="new">New Book</f:link.action>
+    </f:comment>
 </f:section>
 </html>
