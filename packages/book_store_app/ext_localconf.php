@@ -9,19 +9,47 @@ call_user_func(
             'KunalHarkare.BookStoreApp',
             'Book',
             [
+                'Book' => 'list, show, new, create, edit, update, delete',
                 'Author' => 'list, show, new, create, edit, update, delete',
                 'Topic' => 'list, show, new, create, edit, update, delete',
                 'Publisher' => 'list, show, new, create, edit, update, delete',
-                'Book' => 'list, show, new, create, edit, update, delete',
                 'Country' => 'list, show, new, create, edit, update, delete'
             ],
             // non-cacheable actions
             [
-                'Author' => 'create, update, delete',
-                'Topic' => 'create, update, delete',
-                'Publisher' => 'create, update, delete',
-                'Book' => 'create, update, delete',
-                'Country' => 'create, update, delete'
+                'Book' => 'list, show, new, create, edit, update, delete',
+                'Author' => 'list, show, new, create, edit, update, delete',
+                'Topic' => 'list, show, new, create, edit, update, delete',
+                'Publisher' => 'list, show, new, create, edit, update, delete',
+                'Country' => 'list, show, new, create, edit, update, delete'
+            ]
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'KunalHarkare.BookStoreApp',
+            'Authors',
+            [
+                'Author' => 'list, show, new, create, edit, update, delete',
+                'Publisher' => 'list, show, new, create, edit, update, delete',
+                'Country' => 'list, show, new, create, edit, update, delete'
+            ],
+            // non-cacheable actions
+            [
+                'Author' => 'list, show, new, create, edit, update, delete',
+                'Publisher' => 'list, show, new, create, edit, update, delete',
+                'Country' => 'list, show, new, create, edit, update, delete'
+            ]
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'KunalHarkare.BookStoreApp',
+            'Topics',
+            [
+                'Topic' => 'list, show, new, create, edit, update, delete'
+            ],
+            // non-cacheable actions
+            [
+                'Topic' => 'list, show, new, create, edit, update, delete'
             ]
         );
 
@@ -39,6 +67,24 @@ call_user_func(
                                 list_type = bookstoreapp_book
                             }
                         }
+                        authors {
+                            iconIdentifier = book_store_app-plugin-authors
+                            title = Authors
+                            description = Display List of all authors
+                            tt_content_defValues {
+                                CType = list
+                                list_type = bookstoreapp_authors
+                            }
+                        }
+                        topics {
+                            iconIdentifier = book_store_app-plugin-topics
+                            title = Topics
+                            description = Display List of all topics
+                            tt_content_defValues {
+                                CType = list
+                                list_type = bookstoreapp_topics
+                            }
+                        }
                     }
                     show = *
                 }
@@ -51,6 +97,18 @@ call_user_func(
 				\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
 				['source' => 'EXT:book_store_app/Resources/Public/Icons/user_plugin_book.svg']
 			);
+
+            $iconRegistry->registerIcon(
+                'book_store_app-plugin-authors',
+                \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+                ['source' => 'EXT:book_store_app/Resources/Public/Icons/user_plugin_book.svg']
+            );
+
+            $iconRegistry->registerIcon(
+                'book_store_app-plugin-topics',
+                \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+                ['source' => 'EXT:book_store_app/Resources/Public/Icons/user_plugin_book.svg']
+            );
 		
     }
 );
